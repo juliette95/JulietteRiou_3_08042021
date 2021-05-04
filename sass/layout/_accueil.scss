@@ -2,7 +2,7 @@
 
 body
 {
-    width: 375px;
+    width: /*375px*/ auto;
     height: auto;
     font-size: 1rem;
     display: flex;
@@ -32,34 +32,77 @@ header
     margin-right: auto;
     width: 50%; 
 }
-
-form
+.form
 {
-    color: red; 
-    height: 2,5%;
+    width: 100%;
+    background-color: $color-form;
+    padding: 2% 0% 2% 0%;
+    box-shadow: 0px 0px 4px $color-footer inset;
+}
+.form div
+{
+    color: $color-footer; 
+    background-color: $color-form;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin: 0% auto 0% auto;
+    font-size: 1rem;
+    padding: 2%;
+    align-items: baseline;
+    & input{
+        background-color: $color-form;
+        color: $color-footer;
+        border: none;
+        margin-left: 5%;
+        text-align: flex-start;
+        font-size: 1rem;
+        padding: 2%;
+    }
+ 
+
 }
 
 #introduction 
 {
     background-color: $color-quaternary;
+    width: 100%;
     height: auto;
     text-align: center;
-
+    padding: 5% 0% 15% 0%; 
     & h1{
-        
-        border: 2px solid pink;
         width: 60%; 
         margin-right: auto;
         margin-left: auto;
-     
+    }
+    & h4{
+        width: 70%;
+        margin-right: auto; 
+        margin-left: auto;
     }
 }
 
+.explorer{
+    color: white;
+    background-color: $color-primary;
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 20px;
+    border: none;
+    padding: 0% 5% 0% 5%;
+
+}
 #how_it_works
 {
+    display: flex;
+    flex-direction: column;
     height: auto;
     width: 100%; 
-    padding: 10% 0% 10% 0%;
+    padding: 5% 0% 10% 0%;
+    & h1{
+
+        width: 90%;
+    }
 }
 
 
@@ -122,6 +165,7 @@ form
     padding: 10% 0% 20% 0%;
 }
 
+
 #prev_restaurants .prev_rest_1, .prev_rest_2, .prev_rest_3, .prev_rest_4
 {
     width: 90%;
@@ -131,26 +175,25 @@ form
     border-radius: 20px;
     margin-top: 5%;
     box-shadow: 1px 1px 5px grey;
-    /*position: relative;*/
-    /*& img{
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        height: 50%;
-        width: 80%;
-    }*/ 
+    & a{
+        color:black;
+        text-decoration: none;
+    }
+    & a:hover{
+        color: black; 
+    }
 }
-
+   
 .new{
- 
+
     width: auto;
-    /*z-index: 1;
-    text-align: center;*/
     position: absolute;
     margin-left: 60%;
     padding: 2%;
     background-color: $color-tertiary;
     color: $color-quinary;
     border-radius: 5%;
+    font-size: 0.8rem;
 }
 
 .caption
@@ -161,11 +204,10 @@ form
     width: 90%; 
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid orange; 
     justify-content: space-between;
     padding: 0% 5% 0% 5%;
+    line-height: 40%;
     &_like{
-        border: 2px solid green; 
         margin-top: auto; 
         margin-bottom: auto;
         font-size: 1.2rem;
@@ -174,18 +216,28 @@ form
 }
 
 footer{
-    width: 100%;
+    width: auto;
     height: auto;
     background-color: $color-footer;
     color: white;
+    padding: 5%;
+    line-height: 0.8rem;
+    & .ohmyfood, h3 , h4{
+        width: 80%
+    }
+
 }
 
 .footer_title{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    border: 2px solid green; 
     align-items: baseline;
+    width: 80%;
+    & i{
+        padding-right: 2%;
+    }
     
 }
+
 }
