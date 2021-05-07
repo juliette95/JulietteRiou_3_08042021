@@ -1,0 +1,141 @@
+@mixin header-banner {
+    height: 10%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    width: 100%; 
+}
+
+@mixin header-logo {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 4%;
+}
+
+@mixin button-linear {
+    color: white;
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px; 
+    padding-bottom: 0px;
+}
+
+@mixin footer-banner {
+    background-color: $color-footer;
+    color: white;
+    padding: 5%;
+    line-height: 0.8rem;  
+}
+
+@mixin footer-banner-title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    width: 80%; 
+}
+
+/* MENU */ 
+
+@mixin menu_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+@mixin menu_img{
+    width: 100%;
+    z-index: 1;
+    position: relative; 
+}
+
+@mixin menu_main{
+    background-color: $color-quaternary;
+    border-top-left-radius: 2em; 
+    border-top-right-radius: 2em;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: -15%;
+    position: relative; 
+    z-index: 2;
+}
+
+@mixin menu_main_header-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 90%; 
+    margin: auto;
+    align-items: baseline; 
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+@mixin menu_main_category{
+    width: 90%; 
+    margin: 0% auto 8% auto;
+    padding-bottom: 1%;
+}
+
+@mixin menu_main_category-title{
+    border-bottom: 2px solid $color-tertiary; 
+    padding-bottom: 1%;
+    width: 8%;
+}
+
+@mixin menu_main_suggestion{
+        background-color: white; 
+        width: 100%;
+        margin: 0% auto 5% auto;
+        border-radius: 1em; 
+        box-shadow: 4px 4px 6px $color-form;
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: nowrap;
+        justify-content: center;
+        /*line-height: 30%;*/
+        padding: 1%;
+
+}
+
+@mixin menu_main_suggestion-titles{
+    width: 80%;
+    padding: 0px;  
+    margin: auto 0% auto 0%; 
+}
+
+@mixin menu_main_suggestion-titles-first{
+    line-height: 1.2em;
+    margin: 0% auto 0% auto; 
+}
+
+@mixin menu_main_suggestion-titles-second{
+    height: auto;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0% auto 0% auto; 
+}
+
+@mixin menu_main_suggestion-price{
+    height: auto;
+    border: 2px solid goldenrod;
+}
+
+@mixin menu_main_button-commander{
+    text-align: center;
+    margin: auto; 
+    padding-bottom: 8%;
+}
+
+
+
+
+
