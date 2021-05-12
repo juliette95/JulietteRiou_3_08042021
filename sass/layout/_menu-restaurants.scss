@@ -1,0 +1,125 @@
+
+    body
+    {
+       @include menu_body;
+    }
+
+    .header_menu{
+        @include menu_header;
+        @include header-banner;
+        #logo{
+            @include header-logo;}
+        .fa-arrow-left{
+            margin: auto 10% auto 10%;
+            width: 90%; 
+            color: black;
+        }
+    }
+
+    .menu_img{
+        width: 100%;
+        height: 80%;
+        z-index: 1;
+        position: relative; 
+        object-fit: cover;
+    }
+
+    #menu
+    {
+       background-color: $color-quaternary;
+        border-top-left-radius: 2em; 
+        border-top-right-radius: 2em;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: -15%;
+        position: relative; 
+        z-index: 2;
+    }
+
+    .header_section
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 90%; 
+        margin: auto;
+        align-items: baseline; 
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+
+    .category_menu{
+        width: 90%; 
+        margin: 0% auto 8% auto;
+        padding-bottom: 1%;
+
+     &-title{
+        border-bottom: 2px solid $color-tertiary; 
+        padding-bottom: 1%;
+        width: 8%;
+     } 
+    }
+
+    .suggestion {
+        background-color: white; 
+        width: 100%;
+        margin: 0% auto 5% auto;
+        border-radius: 1em; 
+        box-shadow: 4px 4px 6px $color-form;
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: nowrap;
+        justify-content: center;
+        /*line-height: 30%;*/
+        padding: 1%;
+
+        &_title{
+            width: 80%;
+            padding: 0px;  
+            margin: auto 0% auto 0%; 
+            h3{
+                line-height: 1.2em;
+                margin: 0% auto 0% auto; 
+            }
+            h4{
+                height: auto;
+                line-height: 1.2em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0% auto 0% auto;
+            }
+        }
+        &_price{
+            border: 2px solid goldenrod;
+            p{
+                display: flex;
+            }
+        }
+    }
+
+    .menu_main_button{
+        @include menu_main_button-commander;
+            button{
+            @include button-linear; 
+            padding-left: 15%; 
+            padding-right: 15%;
+        }
+    }
+
+    footer{
+        @include footer-banner;
+    }
+    
+    .footer_title{
+        @include footer-banner-title;
+        & i{
+            padding-right: 2%;
+        }  
+    }
+
+    .mail:hover {
+        @include footer-banner-mailto;
+    }
+ 
+   
