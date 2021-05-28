@@ -2,6 +2,7 @@
     body
     {
        @include menu_body;
+       cursor: grab;
     }
 
     .header_menu{
@@ -18,7 +19,7 @@
 
     .menu_img{
         width: 100%;
-        height: 80%;
+        height: 15rem; 
         z-index: 1;
         position: relative; 
         object-fit: cover;
@@ -104,6 +105,9 @@
             @include button-linear; 
             padding-left: 15%; 
             padding-right: 15%;
+            &:hover{ 
+                opacity: 0.8;
+            }
         }
     }
 
@@ -114,11 +118,11 @@
     .footer_title{
         @include footer-banner-title;
         & i{
-            padding-right: 2%;
+            @include footer-banner-title-icon;
         }  
     }
 
-    .mail:hover {
+    .mail:link {
         @include footer-banner-mailto;
     }
  

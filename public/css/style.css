@@ -17,6 +17,17 @@ h4 {
 }
 
 /* MENU */
+@keyframes glass {
+  0% {
+    transform: scaleY(0.5);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+  60% {
+    transform: scaleY(0.8);
+  }
+}
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -52,6 +63,36 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   margin: 0;
+  cursor: grab;
+}
+
+.loader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #9356DC;
+  size: 3vh;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  /* 
+  margin: auto; 
+
+  top: 0%;
+  background-color: white;
+  border: 2px solid red; 
+  animation: glass $prog-bar-delay $prog-bar-dur;
+      animation-fill-mode: both; */
+}
+.loader i {
+  /*display: block;*/
+  margin: auto;
+  font-size: 200px;
+  animation: glass 1000ms backwards infinite ease-in-out alternate;
+  /*transform-origin: left;*/
+  /* animation: glass $prog-bar-delay $prog-bar-dur;
+   animation-fill-mode: both; */
+  animation-timing-function: cubic-bezier 0.9, 0, 0.1, 1;
 }
 
 .prev_restaurant_img {
@@ -110,8 +151,7 @@ header {
 }
 #introduction h1 {
   width: 60%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
 }
 #introduction h4 {
   width: 70%;
@@ -132,6 +172,9 @@ header {
   padding-left: 5%;
   padding-right: 5%;
 }
+.explorer:hover {
+  opacity: 0.8;
+}
 
 #how_it_works {
   display: flex;
@@ -142,6 +185,7 @@ header {
 }
 #how_it_works h1 {
   width: 90%;
+  margin: auto;
 }
 
 .step_1, .step_2, .step_3 {
@@ -169,20 +213,26 @@ header {
 }
 .step_1 p:nth-child(1), .step_2 p:nth-child(1), .step_3 p:nth-child(1) {
   order: 1;
-  width: 6%;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background-color: #9356DC;
   color: white;
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.8em;
   margin-left: -2%;
   margin-right: 10%;
-  text-align: center;
+  /* 
+  margin-left: -2%;
+  margin-right: 10%;
+  padding: 0.2rem 4px ; */
 }
 .step_1 i:nth-child(2), .step_2 i:nth-child(2), .step_3 i:nth-child(2) {
   order: 2;
   width: auto;
   align-content: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
 }
 .step_1 h3:nth-child(3), .step_2 h3:nth-child(3), .step_3 h3:nth-child(3) {
   order: 3;
@@ -195,6 +245,10 @@ header {
   width: 100%;
   /*height: auto;*/
   padding: 10% 0% 20% 0%;
+}
+#prev_restaurants h1 {
+  width: 90%;
+  margin: auto;
 }
 
 #prev_restaurants .prev_rest_1, .prev_rest_2, .prev_rest_3, .prev_rest_4 {
@@ -217,7 +271,8 @@ header {
 .new {
   width: auto;
   position: absolute;
-  margin-left: 60%;
+  /*margin-left: 60%;*/
+  margin-left: 65%;
   padding: 2%;
   background-color: #99E2D0;
   color: #008766;
@@ -266,10 +321,12 @@ footer {
   width: 80%;
 }
 .footer_title i {
-  padding-right: 2%;
+  font-size: 0.7em;
+  width: 5%;
+  margin-right: 5%;
 }
 
-.mail:hover {
+.mail:link {
   color: white;
   text-decoration: none;
 }
@@ -281,6 +338,7 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  cursor: grab;
 }
 
 .header_menu {
@@ -309,7 +367,7 @@ body {
 
 .menu_img {
   width: 100%;
-  height: 80%;
+  height: 15rem;
   z-index: 1;
   position: relative;
   object-fit: cover;
@@ -403,6 +461,9 @@ body {
   padding-left: 15%;
   padding-right: 15%;
 }
+.menu_main_button button:hover {
+  opacity: 0.8;
+}
 
 footer {
   background-color: #353535;
@@ -419,10 +480,12 @@ footer {
   width: 80%;
 }
 .footer_title i {
-  padding-right: 2%;
+  font-size: 0.7em;
+  width: 5%;
+  margin-right: 5%;
 }
 
-.mail:hover {
+.mail:link {
   color: white;
   text-decoration: none;
 }

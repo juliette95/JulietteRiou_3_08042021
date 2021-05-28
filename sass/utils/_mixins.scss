@@ -38,6 +38,12 @@
     width: 80%; 
 }
 
+@mixin footer-banner-title-icon {
+    font-size: 0.7em;
+    width: 5%; 
+    margin-right: 5%;
+}
+
 @mixin footer-banner-mailto{
     color: white;
     text-decoration: none; 
