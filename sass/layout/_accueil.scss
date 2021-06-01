@@ -4,7 +4,7 @@ body
 {
     /*width: 375px auto;
     height: auto;*/
-    font-size: 1rem;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -12,20 +12,19 @@ body
     margin: 0;
     cursor: grab;
 } 
-$prog-bar-dur: 1s; 
-$prog-bar-delay: 10s;
-.loader
+/*$prog-bar-dur: 1s; 
+$prog-bar-delay: 10s;*/ 
+/*.loader
 {
     display: flex; 
     width: 100%; 
     height: 100%;
     color: $color-primary;
-    size: 3vh; 
     position: fixed; 
     background-color: white;
     z-index: 1;
 
-    /* 
+    
     margin: auto; 
    
     top: 0%;
@@ -34,8 +33,8 @@ $prog-bar-delay: 10s;
     animation: glass $prog-bar-delay $prog-bar-dur;
         animation-fill-mode: both; */ 
     
-    & i {
-        /*display: block;*/ 
+   /* & i {
+        
         margin: auto; 
         font-size: 200px;
         animation: glass 1000ms backwards infinite ease-in-out alternate; 
@@ -43,10 +42,11 @@ $prog-bar-delay: 10s;
         /*transform-origin: left;*/ 
        /* animation: glass $prog-bar-delay $prog-bar-dur;
         animation-fill-mode: both; */
-        animation-timing-function: cubic-bezier (.9, 0, .1, 1); 
-    }
+        /*animation-timing-function: cubic-bezier (.9, 0, .1, 1);*/  
 
-}
+
+
+
 
 
 .prev_restaurant_img
@@ -87,7 +87,6 @@ header {
         color: $color-footer;
         border: none;
         margin-left: 5%;
-        text-align: flex-start;
         font-size: 1rem;
         padding: 2%;
     }
@@ -97,7 +96,7 @@ header {
 {
     background-color: $color-quaternary;
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     text-align: center;
     padding: 5% 0% 15% 0%; 
     & h1{
@@ -229,8 +228,7 @@ header {
 
     width: auto;
     position: absolute;
-    /*margin-left: 60%;*/ 
-    margin-left: 65%; 
+    right: 10%;
     padding: 2%;
     background-color: $color-tertiary;
     color: $color-quinary;
@@ -260,12 +258,115 @@ header {
     padding: 0% 5% 0% 5%;
     line-height: 40%;
     &_like{
+        display: flex; 
         margin-top: auto; 
         margin-bottom: auto;
-        font-size: 1.2rem;
-        font-weight: lighter;
-    }
+        font-size: 1.2rem; 
+        cursor: pointer;
+       
+        
+        /*color: black; 
+
+        background: green; /*linear-gradient(to bottom, $color-primary, $color-secondary);*/ 
+        
+        /*-webkit-text-stroke-width: 1px; 
+        -webkit-text-stroke-color: black;*/ 
+    } 
 }
+.empty_1{
+    color: red; 
+    background: white;
+    position: relative; 
+   
+}
+
+
+
+    
+.caption_like .empty_2{
+
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.full:hover{
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -2;
+    position: absolute; 
+    margin-right: 30%;
+
+}
+
+   
+       
+        /*background: linear-gradient(to bottom, $color-primary, $color-secondary);  */ 
+        /*&_like::before{
+        background-color: pink; 
+        /*-webkit-text-stroke-width: 1px; 
+        -webkit-text-stroke-color: red; 
+        }*/ 
+    
+           /*background: linear-gradient(to bottom, $color-primary, $color-secondary);*/ 
+           
+           
+           /*-webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;*/ 
+        
+
+       /* .fa-heart::after{
+            color: blue;
+            z-index: 10;
+        }*/ 
+
+       /* & i::after{
+            color: white; 
+        }*/ 
+    
+
+   /* .empty::after{
+        background: transparent;
+    }*/
+
+   /* .empty::before{
+        
+        /*transition: transform 2s; 
+        transition-timing-function: linear; 
+        background: linear-gradient(to top, $color-primary, $color-secondary); 
+    }
+
+    .empty::after{
+        
+        /*transition: transform 2s; 
+        transition-timing-function: linear; 
+        background: linear-gradient(to top, green, blue); */ 
+    
+        
+        /*&:hover{
+            
+            opacity: 0.5;
+            transition: opacity 5s;
+            
+            /*transition: opacity 250ms; 
+
+            
+        }*/ 
+        /*font-weight: lighter;*/ 
+        /*background-color: linear-gradient(to top, $color-primary, $color-secondary); 
+        /*&:hover{
+            /*background: linear-gradient(to top, $color-primary, $color-secondary); 
+            opacity: 1; 
+            transition: all 10s ease-in-out;
+            overflow: hidden; 
+        }*/ 
+
+    
+
 
 footer{
     @include footer-banner;
@@ -284,3 +385,267 @@ footer{
 
 /*}*/ 
 
+/*----------------Tablet-----------*/ 
+@media all and (min-width: 768px) and (max-width: 991px){
+
+
+#how_it_works
+{
+    width: 95%;
+    margin: auto;
+    & h1 {
+        width: 100%; 
+    }
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+}
+
+.step_1, .step_2, .step_3{
+    width: 30%; 
+    & h3{
+        width: 60%;
+    }
+    
+}
+
+#prev_restaurants 
+{
+    padding: 10% 0% 10% 0%; 
+    & .prev_rest_1, .prev_rest_2, .prev_rest_3, .prev_rest_4{
+        width: 40%;
+    }
+}
+.prev_rest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &_1 .new{
+
+        margin-right: 50%;
+        
+    }
+    &_2 .new{
+ 
+        margin-right: 0%;
+     
+    }
+}
+      
+}
+
+/*---------- LAPTOP ----------*/ 
+@media all and (min-width: 992px) and (max-width:1199px){
+
+/*body{
+    font-size: 2em;
+}*/ 
+
+#how_it_works
+{
+    width: 95%;
+    margin: auto;
+    & h1 {
+        width: 100%; 
+    }
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+}
+
+.step_1, .step_2, .step_3{
+    width: 30%; 
+    & h3{
+        width: 60%; 
+    }
+}
+
+#prev_restaurants 
+{
+    padding: 10% 0% 10% 0%; 
+    & .prev_rest_1, .prev_rest_2, .prev_rest_3, .prev_rest_4{
+        width: 40%;
+    }
+}
+.prev_rest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &_1 .new{
+
+        margin-right: 50%;
+        
+    }
+    &_2 .new{
+ 
+        margin-right: 0%;
+     
+    }
+}
+
+}
+
+/*------------ LARGE SCREEN -----------*/ 
+@media all and (min-width: 1200px){
+
+
+  /*  p, h1,h2,h3,h4, {
+        font-size: 1.5em;
+    }*/ 
+
+    header{
+        height: 5%;
+        padding: 2%;
+    }
+    
+   .form{
+       position: absolute;
+       /*top: 5%;
+       right: 5%; */ 
+       width:25%;
+       height: 8%;
+       border-radius: 20px;
+       margin: -5% 0% 10% 70%; 
+       padding: 0px; 
+       /*box-shadow: 2% 2% 2% $color-form;*/
+       box-shadow: 1px 1px 10px $color-footer /*inset*/;
+       & div{
+           margin: auto; 
+           padding: 0px;
+           width: 90%;
+           height: 90%;
+           vertical-align: middle;
+           & i{
+               display: flex;
+               color: $color-primary; 
+               height: 100%;
+               width: 30%;
+               justify-content: center;
+               align-items: center;
+               font-size: 1.5em;
+           }
+           & input{
+               height: 85%;
+               width: 60%;
+               margin: auto;
+           }
+       }
+       
+   }
+    .logo{
+        font-size: 50em;
+    }
+
+    #introduction{
+        height: 10%;
+        padding: 2% 0% 2% 0%; 
+        margin-top: 2%;
+    }
+    #how_it_works
+    {
+        width: 95%;
+        height: 20%;
+        margin: auto;
+        & h1 {
+            width: 100%; 
+        }
+    }
+    
+    .steps{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .step_1, .step_2, .step_3{
+        width: 30%; 
+    }
+
+    #prev_restaurants 
+{
+    padding: 5% 0% 5% 0%; 
+    & .prev_rest_1, .prev_rest_2, .prev_rest_3, .prev_rest_4{
+        width: 40%;
+    }
+}
+
+.prev_rest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto; 
+    &_1 .new{
+
+        margin-right: 45%;
+        padding: 1%;
+        
+    }
+    &_2 .new{
+ 
+        margin-right: 5%;
+        padding: 1%;
+     
+    }
+}
+
+footer{
+    padding: 1% 5% 1% 5%;
+    height: 10%;
+}
+
+#footer_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*justify-content: center;
+    align-items: center;*/ 
+    /*height: 20%;*/ 
+    width: 100%;
+    padding: 0.5%; 
+    margin: auto;
+    line-height: 0%;
+    & .footer_div{
+       &_1{
+          
+           width: 70%;
+           padding: 1% 0% 1% 0%; 
+       }
+       &_2{
+           line-height: 1em;
+       }
+    }
+    
+    
+}
+/*.footer_title{
+    border: 2px solid fuchsia;
+    width: 9%;
+    height: 9%;
+    margin: 0px; 
+    padding: 0px;
+    & h3{
+        border: 2px solid red;
+        margin: 0px;
+    }
+}*/ 
+
+/*#footer_info{
+        border: 2px solid green;
+        width: 100%;
+        height: 80%;
+        display: flex; 
+        flex-direction: row;
+        flex-wrap: nowrap;
+        bottom: 2%;
+       /* & h4{
+            border: 2px solid orange;
+            width: 50%;
+        }
+    }*/
+
+
+}

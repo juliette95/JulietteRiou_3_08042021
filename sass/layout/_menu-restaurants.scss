@@ -19,7 +19,7 @@
 
     .menu_img{
         width: 100%;
-        height: 15rem; 
+        height: /*15rem*/ 70%;  
         z-index: 1;
         position: relative; 
         object-fit: cover;
@@ -126,4 +126,56 @@
         @include footer-banner-mailto;
     }
  
-   
+   /*----------------Tablet-----------*/ 
+@media all and (min-width: 768px) and (max-width: 991px){
+
+/*logo{
+    font-size: 1.5em; 
+}*/ 
+
+.menu_img{
+    
+    height: 70%; 
+}
+
+.category_menu{
+    width: 60%; 
+}
+
+}
+
+/*---------- LAPTOP ----------*/ 
+@media all and (min-width: 992px) and (max-width:1199px){
+
+/*#logo{
+    font-size: 1.5em; 
+}*/ 
+
+.menu_img{
+    height: 70%; 
+}
+
+.category_menu{
+    width: 60%; 
+}
+
+}
+
+/*------------ LARGE SCREEN -----------*/ 
+@media all and (min-width: 1200px){
+
+/*#logo{
+        font-size: 1.8em; 
+}*/ 
+
+.menu_img{
+   height: 70%; 
+}
+
+.category_menu{
+    width: 60%; 
+}
+
+
+}
+
