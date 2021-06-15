@@ -11,42 +11,102 @@ body
     justify-content: center;
     margin: 0;
     cursor: grab;
-} 
-/*$prog-bar-dur: 1s; 
-$prog-bar-delay: 10s;*/ 
-/*.loader
-{
-    display: flex; 
-    width: 100%; 
-    height: 100%;
-    color: $color-primary;
-    position: fixed; 
-    background-color: white;
-    z-index: 1;
-
-    
-    margin: auto; 
+    position: absolute; 
+    z-index: 99; 
    
-    top: 0%;
-    background-color: white;
-    border: 2px solid red; 
-    animation: glass $prog-bar-delay $prog-bar-dur;
-        animation-fill-mode: both; */ 
-    
-   /* & i {
+}   
+
+/*loader*/ 
+#loader{
+    width: 100%; 
+    margin: auto; 
+    position: relative; 
+  
+    text-align: justify;   
+} 
+   
+.loader-circle{
+   
+   /*position: fixed; */ 
+    width: 100%; 
+    height: 100%; 
+    animation: background-loader 3s linear;
+    -webkit-animation: background-loader 3s linear;
+     animation-fill-mode: forwards;  
+     -webkit-animation-fill-mode: forwards;  
+ }
+
+ .loader-circle::before{
+     content: ""; 
+     position: absolute;
+     width: 100%; 
+     height: 100%; 
+     z-index: 200; 
+     overflow: hidden; 
+     background: white; 
+     opacity: 1;  
+    animation: background-loader 3s linear;
+    -webkit-animation: background-loader 3s linear;
+     animation-fill-mode: forwards;  
+     -webkit-animation-fill-mode: forwards;   
+     
+ }
+
+ @keyframes background-loader {
+    from{
+        opacity: 1; 
+      /* z-index: 102;*/ 
         
-        margin: auto; 
-        font-size: 200px;
-        animation: glass 1000ms backwards infinite ease-in-out alternate; 
+        
+    }
+    to{
+        opacity: 0; 
+       /* z-index: 0;*/ 
     
-        /*transform-origin: left;*/ 
-       /* animation: glass $prog-bar-delay $prog-bar-dur;
-        animation-fill-mode: both; */
-        /*animation-timing-function: cubic-bezier (.9, 0, .1, 1);*/  
+        
+       
+    
+        
+    }
+}
 
+ .loader-circle::after{
+     box-sizing: border-box; 
+ 
+     content:""; 
+     position: fixed; 
+     border: 10px solid white;
+     border-top: 10px solid #9356DC;
+     border-bottom: 10px solid #eaeaea;
+     border-radius: 50%;
+     width: 80px; 
+     height: 80px;
+     margin: auto;
+     top: 0; left: 0; right: 0; bottom: 0;
+     animation: spin 3s linear;
+     -webkit-animation: spin 3s linear;
+     animation-fill-mode: forwards;  
+     -webkit-animation-fill-mode: forwards;  
+    
+ }
+     
+ @keyframes spin {
+    from{
+        transform: rotate(0deg);
+        opacity: 1; 
+        z-index: 101; 
+    
+    }
+    to{
+        transform: rotate(360deg);
+        opacity: 0; 
 
-
-
+        
+        z-index: 0;
+        
+        
+    }
+}
 
 
 .prev_restaurant_img
@@ -234,6 +294,7 @@ header {
     color: $color-quinary;
     border-radius: 5%;
     font-size: 0.8rem;
+  
 }
 
 
@@ -263,110 +324,49 @@ header {
         margin-bottom: auto;
         font-size: 1.2rem; 
         cursor: pointer;
-       
-        
-        /*color: black; 
-
-        background: green; /*linear-gradient(to bottom, $color-primary, $color-secondary);*/ 
-        
-        /*-webkit-text-stroke-width: 1px; 
-        -webkit-text-stroke-color: black;*/ 
     } 
 }
-.empty_1{
-    color: red; 
-    background: white;
-    position: relative; 
-   
-}
+
+
+.full {
+   /* -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;*/ 
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    &:hover{
+        animation: heart 2s linear;
+        animation-fill-mode: backwards;
+        -webkit-text-stroke: 0px black;
 
 
 
-    
-.caption_like .empty_2{
-
-    background: linear-gradient(to bottom, $color-primary, $color-secondary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    
-}
-
-.full:hover{
-    background: linear-gradient(to bottom, $color-primary, $color-secondary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    z-index: -2;
-    position: absolute; 
-    margin-right: 30%;
-
-}
-
-   
+       /* background: linear-gradient(to bottom, $color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/ 
        
-        /*background: linear-gradient(to bottom, $color-primary, $color-secondary);  */ 
-        /*&_like::before{
-        background-color: pink; 
-        /*-webkit-text-stroke-width: 1px; 
-        -webkit-text-stroke-color: red; 
-        }*/ 
-    
-           /*background: linear-gradient(to bottom, $color-primary, $color-secondary);*/ 
-           
-           
-           /*-webkit-background-clip: text;
-           -webkit-text-fill-color: transparent;*/ 
+        /*animation-name: heart; */ 
+       /* transition-property: opacity, top;
+        transition-duration: 3s, 5s;*/ 
+        
         
 
-       /* .fa-heart::after{
-            color: blue;
-            z-index: 10;
-        }*/ 
 
-       /* & i::after{
-            color: white; 
-        }*/ 
-    
-
-   /* .empty::after{
-        background: transparent;
-    }*/
-
-   /* .empty::before{
         
-        /*transition: transform 2s; 
-        transition-timing-function: linear; 
-        background: linear-gradient(to top, $color-primary, $color-secondary); 
+        /*transform: */ 
     }
 
-    .empty::after{
-        
-        /*transition: transform 2s; 
-        transition-timing-function: linear; 
-        background: linear-gradient(to top, green, blue); */ 
-    
-        
-        /*&:hover{
-            
-            opacity: 0.5;
-            transition: opacity 5s;
-            
-            /*transition: opacity 250ms; 
-
-            
-        }*/ 
-        /*font-weight: lighter;*/ 
-        /*background-color: linear-gradient(to top, $color-primary, $color-secondary); 
-        /*&:hover{
-            /*background: linear-gradient(to top, $color-primary, $color-secondary); 
-            opacity: 1; 
-            transition: all 10s ease-in-out;
-            overflow: hidden; 
-        }*/ 
-
-    
-
+}
+/*
+@keyframes heart{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5; 
+    }
+}
+*/
 
 footer{
     @include footer-banner;
