@@ -4,7 +4,54 @@
        @include menu_body;
        cursor: grab;
     }
-
+/* suggestion dishes loading*/ 
+    .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10{
+        animation-name: suggestion-loading; 
+        animation-duration: 5s; 
+        animation-timing-function: cubic-bezier(.34,0,0,.98); 
+        animation-fill-mode: forwards;
+       }
+       
+       .s1{
+           animation-delay: 2100ms;
+           
+       }
+       .s2{
+           animation-delay: 2200ms;
+          
+       }
+       .s3{
+           animation-delay: 2300ms;
+           
+       }
+       .s4{
+           animation-delay: 2400ms;
+          
+       }
+       .s5{
+           animation-delay: 2500ms;
+         
+       }
+       .s6{
+           animation-delay:2600ms;
+         
+       }
+       .s7{
+           animation-delay: 2700ms;
+          
+       }
+       .s8{
+           animation-delay: 2800ms;
+         
+       }
+       .s9{
+           animation-delay: 2900ms;
+         
+       }
+       .s10{
+           animation-delay: 3000ms;
+       }
+/*header*/ 
     .header_menu{
         @include menu_header;
         @include header-banner;
@@ -17,12 +64,12 @@
             color: black;
         }
     }
+/* Main */ 
 
+    /* img - background */ 
     .img-background_palette{
         background-image: url("../../public/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-        @include menu_background; 
-        z-index: 1; 
-        
+        @include menu_background;   
     }
 
     .img-background_enchantee{
@@ -39,7 +86,8 @@
         background-image: url("../../public/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
         @include menu_background;
     }
-    
+
+    /* Menu */ 
     #menu
     {
        background-color: $color-quaternary;
@@ -48,11 +96,6 @@
         width: 100%;
         margin-bottom: 0px;
         margin-top: -5%; 
-       
-        
-        /*margin-top: 60%;*/ 
-       /* position: relative; 
-        z-index: 2;*/ 
     }
 
     .header_section
@@ -71,7 +114,6 @@
         width: 90%; 
         margin: 0% auto 8% auto;
         padding-bottom: 1%;
-
      &-title{
         border-bottom: 2px solid $color-tertiary; 
         padding-bottom: 1%;
@@ -88,105 +130,48 @@
         flex-direction: row; 
         flex-wrap: nowrap;
         margin: 0% auto 5% auto;
-        /*vertical-align: middle;*/ 
-        width: 50%;  
-       
-
         & i{
             display: none; 
         }
-        
         &:hover i{
-            
             animation-name: spin_icon; 
             animation-duration: 1s; 
             animation-timing-function: linear; 
-            /*animation-iteration-count: infinite; */ 
             color: white;
             margin: auto; 
             display: block; 
-           
-
-
-
-            
-
+            cursor: pointer; 
         }
-    }
-
-    @keyframes spin_icon{
-        0%{
-            transform: translateX(5%)  rotate(0deg); 
-            animation-direction: reverse;
-            opacity: 0;
-             
-            
-        }
-        5%{
-            opacity: 1; 
-
-        }
-
-        100%{
-            transform: translateX(-40%)  rotate(360deg) ; 
-            
-        }
-
     }
 
     .all_title-price {
-       /* background-color: white; 
-        width: 100%;
-        margin: 0% auto 5% auto;
-        /*border-radius: 1em; 
-        box-shadow: 4px 4px 6px $color-form;*/
         display: flex; 
         flex-direction: row; 
         flex-wrap: nowrap;
         justify-content: space-between;
         border-radius: 1em; 
         background-color: white;
-        padding: 0 5% 0 5%; 
+        padding: 5%; 
         width: 100%; 
-        
         &:hover{
             animation-name: moving_title; 
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-fill-mode: both;
-        }
-
-        @keyframes moving_title{
-            0%{
-                width: 100%; 
-            }
-            50%{
-                width: 80%;
-            }
-            100%{
-                width: 100%;
-            }
+            cursor: pointer; 
         }
 
        .suggestion_title{
-            width: 60%;
+            width: 70%;
             height: 100%; 
             padding: 0px;  
-            margin: auto 0% auto 0%; 
-           
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            justify-content: center;
-           /* &:hover{
-                background-color:blue;
-                transform : scaleX(0.7);  
-            }*/ 
-            
+            justify-content: center;  
             h3{
                 line-height: 1.2em;
                 margin: 0% auto 0% auto;
-                
                 width: 100%; 
             }
             h4{
@@ -196,42 +181,21 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 margin: 0% auto 0% auto;
-                
                 width: 100%;  
             }
         }
         .suggestion_price{
-            /*display: flex; 
-            flex-direction: row; 
-            flex-wrap: nowrap;*/ 
-           /* margin-left:40%; */
-           
-          /* flex-direction: column;
-           justify-content: flex-end;*/ 
            display: flex; 
            flex-direction: column; 
            flex-wrap: nowrap;
-           justify-content: flex-end; 
-          
-          
-           
+           justify-content: flex-end;  
             p{
-              /*  display: flex;
-                vertical-align: bottom;*/ 
-               /* display: flex;
-           flex-direction: column;
-           justify-content: flex-end;*/ 
-         
-           
-           
-                /*margin-top: 100%; */ 
                 margin: 0px; 
             }
         }
     }
 
-    
-    
+/* button */ 
     .menu_main_button{
         @include menu_main_button-commander;
             button{
@@ -243,7 +207,7 @@
             }
         }
     }
-
+/* footer */ 
     footer{
         @include footer-banner;
     }

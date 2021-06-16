@@ -62,75 +62,9 @@
 	}
 }
 
-
-/*@keyframes glass{
-    0% {
-        transform: scaleY(0.5);
-    }
-
-    30% {
-        transform: scaleY(1.0);
-    }
-
-    60% {
-        transform: scaleY(0.8);
-    }
-}
-*/ 
-
 /*---------------menu_restaurant----------------*/ 
 
 /* suggestion dishes loading*/ 
-
-/*.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10{
- animation-name: suggestion-loading; 
- animation-duration: 5s; 
- animation-timing-function: cubic-bezier(.34,0,0,.98); 
- 
- animation-fill-mode: forwards;
- 
-
-}
-
-.s1{
-    animation-delay: 2100ms;
-    
-}
-.s2{
-    animation-delay: 2200ms;
-   
-}
-.s3{
-    animation-delay: 2300ms;
-    
-}
-.s4{
-    animation-delay: 2400ms;
-   
-}
-.s5{
-    animation-delay: 2500ms;
-  
-}
-.s6{
-    animation-delay:2600ms;
-  
-}
-.s7{
-    animation-delay: 2700ms;
-   
-}
-.s8{
-    animation-delay: 2800ms;
-  
-}
-.s9{
-    animation-delay: 2900ms;
-  
-}
-.s10{
-    animation-delay: 3000ms;
-}
 
 @keyframes suggestion-loading{
     0%{
@@ -145,31 +79,39 @@
     100%{
         opacity: 1;
     }
+}
 
+/* suggestion price - icon check */ 
 
-}*/ 
-
-/* suggestion price */ 
-
-
-/*.price_animation{
-    background-color: $color-tertiary;
-    color: white; 
-    vertical-align: middle;
-    width: 50%; 
-    
-    
-    &_icon{
-       
-      
-        animation-name: spin_icon; 
-        animation-duration: 4s; 
-
-       
-        
-    
+/* 1st keyframes - spin icon */ 
+@keyframes spin_icon{
+    0%{
+        transform: translateX(5%)  rotate(0deg); 
+        animation-direction: reverse;
+        opacity: 0;
     }
-}*/
+    5%{
+        opacity: 1; 
+    }
+    100%{
+        transform: translateX(-40%)  rotate(360deg); 
+    }
+}
+
+/* 2nd keyframes - green background appears */ 
+
+@keyframes moving_title{
+    0%{
+        width: 100%; 
+    }
+    50%{
+        width: 70%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
 
 
 
