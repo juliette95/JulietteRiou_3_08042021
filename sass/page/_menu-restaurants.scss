@@ -1,90 +1,38 @@
-
+/*---------- MOBILE-FIRST ----------*/ 
     body
     {
        @include menu_body;
        cursor: grab;
-    }
-/* suggestion dishes loading*/ 
-    .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10{
-        animation-name: suggestion-loading; 
-        animation-duration: 5s; 
-        animation-timing-function: cubic-bezier(.34,0,0,.98); 
-        animation-fill-mode: forwards;
-       }
-       
-       .s1{
-           animation-delay: 2100ms;
-           
-       }
-       .s2{
-           animation-delay: 2200ms;
-          
-       }
-       .s3{
-           animation-delay: 2300ms;
-           
-       }
-       .s4{
-           animation-delay: 2400ms;
-          
-       }
-       .s5{
-           animation-delay: 2500ms;
-         
-       }
-       .s6{
-           animation-delay:2600ms;
-         
-       }
-       .s7{
-           animation-delay: 2700ms;
-          
-       }
-       .s8{
-           animation-delay: 2800ms;
-         
-       }
-       .s9{
-           animation-delay: 2900ms;
-         
-       }
-       .s10{
-           animation-delay: 3000ms;
-       }
-/*header*/ 
-    .header_menu{
-        @include menu_header;
-        @include header-banner;
-        
-        #logo{
-            @include header-logo;}
-        .fa-arrow-left{
-            margin: auto 10% auto 10%;
-            width: 90%; 
-            color: black;
-        }
-    }
-/* Main */ 
+    } 
 
+/* Main */ 
     /* img - background */ 
     .img-background_palette{
         background-image: url("../../public/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-        @include menu_background;   
+        @include menu_background; 
+        z-index: -1; 
+        position: sticky;  
     }
 
     .img-background_enchantee{
         background-image: url("../../public/img/stil-u2Lp8tXIcjw-unsplash.jpg");
         @include menu_background;
-       
+        z-index: -1; 
+        position: sticky; 
     }
+
     .img-background_française{
         background-image: url("../../public/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
         @include menu_background;
+        z-index: -1; 
+        position: sticky; 
     }
 
     .img-background_delice{
         background-image: url("../../public/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
         @include menu_background;
+        z-index: -1; 
+        position: sticky; 
     }
 
     /* Menu */ 
@@ -132,15 +80,7 @@
         margin: 0% auto 5% auto;
         & i{
             display: none; 
-        }
-        &:hover i{
-            animation-name: spin_icon; 
-            animation-duration: 1s; 
-            animation-timing-function: linear; 
-            color: white;
-            margin: auto; 
-            display: block; 
-            cursor: pointer; 
+            font-size: 1.2em;
         }
     }
 
@@ -152,14 +92,7 @@
         border-radius: 1em; 
         background-color: white;
         padding: 5%; 
-        width: 100%; 
-        &:hover{
-            animation-name: moving_title; 
-            animation-duration: 2s;
-            animation-timing-function: linear;
-            animation-fill-mode: both;
-            cursor: pointer; 
-        }
+        width: 100%; }
 
        .suggestion_title{
             width: 70%;
@@ -184,7 +117,7 @@
                 width: 100%;  
             }
         }
-        .suggestion_price{
+        .suggestion_price{ /*price*/ 
            display: flex; 
            flex-direction: column; 
            flex-wrap: nowrap;
@@ -193,49 +126,15 @@
                 margin: 0px; 
             }
         }
-    }
-
-/* button */ 
-    .menu_main_button{
-        @include menu_main_button-commander;
-            button{
-            @include button-linear; 
-            padding-left: 15%; 
-            padding-right: 15%;
-            &:hover{ 
-                opacity: 0.8;
-            }
-        }
-    }
-/* footer */ 
-    footer{
-        @include footer-banner;
-    }
     
-    .footer_title{
-        @include footer-banner-title;
-        & i{
-            @include footer-banner-title-icon;
-        }  
-    }
-
-    .mail:link {
-        @include footer-banner-mailto;
-    }
- 
    /*----------------Tablet-----------*/ 
 @media all and (min-width: 768px) and (max-width: 991px){
-
-/*logo{
-    font-size: 1.5em; 
-}*/ 
 
 #menu{
     margin-top: -2%;  
 }
 
-
-.category_menu{
+.category_menu{ /* category menu - change suggestion size */ 
     width: 60%; 
 }
 
@@ -244,19 +143,11 @@
 /*---------- LAPTOP ----------*/ 
 @media all and (min-width: 992px) and (max-width:1199px){
 
-/*#logo{
-    font-size: 1.5em; 
-}*/ 
-
-/*.menu_img{
-    height: 70%; 
-}*/
-
 #menu{
     margin-top: -1%;  
 }
 
-.category_menu{
+.category_menu{ /* category menu - change suggestion size */ 
     width: 60%; 
 }
 
@@ -265,14 +156,7 @@
 /*------------ LARGE SCREEN -----------*/ 
 @media all and (min-width: 1200px){
 
-/*#logo{
-        font-size: 1.8em; 
-}*/ 
-
-/*.menu_img{
-   height: 70%; 
-}*/ 
-
+    /*img background - change size*/ 
 .img-background_palette{
     height: 40em;
 }
@@ -289,11 +173,10 @@
     height: 40em;
 }
 
-
+    /* category menu - change suggestion size */ 
 .category_menu{
     width: 60%; 
 }
-
 
 }
 

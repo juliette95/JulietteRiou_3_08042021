@@ -1,0 +1,26 @@
+/*--- HOMEPAGE ---*/
+
+.explorer{
+    @include button-linear;
+    padding-left: 5%; 
+    padding-right: 5%;
+    &:hover{ 
+        opacity: 0.8;
+    }
+}
+
+/*--- MENU PAGE ---*/ 
+
+.menu_main_button{
+    @include menu_main_button-commander;
+        button{
+        @include button-linear; 
+        padding-left: 15%; 
+        padding-right: 15%;
+        &:hover{ 
+            opacity: 0.8;
+        }
+    }
+}
+
+
