@@ -1,11 +1,13 @@
 /*--- HOMEPAGE ---*/
 
-.explorer{
+button{
     @include button-linear;
     padding-left: 5%; 
     padding-right: 5%;
-    &:hover{ 
+    cursor: pointer;
+    &:hover { 
         opacity: 0.8;
+
     }
 }
 

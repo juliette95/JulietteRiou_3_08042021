@@ -312,7 +312,7 @@ p {
 }
 
 /*--- HOMEPAGE ---*/
-.explorer {
+button {
   color: white;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 20px;
@@ -324,8 +324,9 @@ p {
   padding-bottom: 0px;
   padding-left: 5%;
   padding-right: 5%;
+  cursor: pointer;
 }
-.explorer:hover {
+button:hover {
   opacity: 0.8;
 }
 
