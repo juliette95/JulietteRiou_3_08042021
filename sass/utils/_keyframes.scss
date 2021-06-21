@@ -10,7 +10,6 @@
         }
         to{
             opacity: 0; 
-            position: none;   
             z-index: 1;   
         }
     }
@@ -37,37 +36,37 @@
 		    animation-delay: 1000ms;
 	    }
 	    10% {
-		    background: linear-gradient( white 50%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 50%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1100ms;
 	    }
 	    20% {
-		    background: linear-gradient( white 40%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 40%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1200ms;
 	    }
 	    30% {
-		    background: linear-gradient( white 30%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 30%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1300ms;
 	    }
 	    40% {
-		    background: linear-gradient( white 20%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 20%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1400ms;
 	    }
 	    50% {
-		    background: linear-gradient( white 10%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 10%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1500ms;	
 	    }
 	    60% {
-		    background: linear-gradient ( white 8%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 8%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1600ms;
 	    }
 	    70% {
-		    background: linear-gradient (white 5%, $color-primary 10%, $color-secondary);
+		    background: linear-gradient(white 5%, $color-primary 10%, $color-secondary);
 		    -webkit-background-clip: text;
 		    animation-delay: 1700ms;
 	    }

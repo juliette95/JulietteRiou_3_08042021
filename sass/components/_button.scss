@@ -2,13 +2,26 @@
 
 button{
     @include button-linear;
-    padding-left: 5%; 
-    padding-right: 5%;
+    padding: 2% 5% 2% 5%;
     cursor: pointer;
     &:hover { 
         opacity: 0.8;
 
     }
+}
+
+@media all and (min-width: 992px) and (max-width:1199px){
+    button{
+        padding: 1% 5% 1% 5%;  
+    }
+
+    }
+@media all and (min-width: 1200px){
+    button{
+        padding: 1% 5% 1% 5%;
+        
+    }
+    
 }
 
 /*--- MENU PAGE ---*/ 
