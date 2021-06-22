@@ -582,6 +582,11 @@ input[type=text]:focus {
   padding-left: 10%;
 }
 
+.step_1:hover, .step_2:hover, .step_3:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+  cursor: pointer;
+}
+
 /* preview restaurants part */
 #prev_restaurants {
   background-color: #f6f6f6;

@@ -125,6 +125,11 @@ input[type=text]:focus { /* to cancel the automatic border box*/
     }
 }
 
+.step_1:hover, .step_2:hover, .step_3:hover /* step 1,2& 3 change of color (purple with opacity) with the hover */ {
+background-color: rgba(147, 86, 220, 0.1);
+cursor: pointer;  
+} 
+
 /* preview restaurants part */
 #prev_restaurants
 {
